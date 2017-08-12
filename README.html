@@ -1,0 +1,965 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+</style><title>README</title></head><body><article class="markdown-body"><p align="center">
+<a href="http://ruby-hyperloop.io/" alt="Hyperloop" title="Hyperloop">
+<img src="https://camo.githubusercontent.com/b6712384a64f6b266d676d2a17964bb715603959/687474703a2f2f727562792d68797065726c6f6f702e696f2f696d616765732f68797065726c6f6f702d6769746875622d6c6f676f2e706e67" data-canonical-src="http://ruby-hyperloop.io/images/hyperloop-github-logo.png" style="max-width:100%;">
+</a>
+</p>
+<h3 align="center">
+<a id="user-content-the-complete-isomorphic-ruby-framework" class="anchor" href="#the-complete-isomorphic-ruby-framework" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Complete Isomorphic Ruby Framework</h3>
+<br>
+<a href="http://ruby-hyperloop.io/" alt="Hyperloop" title="Hyperloop">
+<img src="https://camo.githubusercontent.com/ed82555fc781d7c03b58ce52ff22e9518976dd3d/687474703a2f2f727562792d68797065726c6f6f702e696f2f696d616765732f67697468756268797065726c6f6f7062616467652e706e67" data-canonical-src="http://ruby-hyperloop.io/images/githubhyperloopbadge.png" style="max-width:100%;">
+</a>
+<a href="http://ruby-hyperloop.io/tutorials/hyperlooprails/webpacker/" alt="Tutorial page" title="Tutorial page">
+<img src="https://camo.githubusercontent.com/767635fe5d95b724605c58b93295c3909997a305/687474703a2f2f727562792d68797065726c6f6f702e696f2f696d616765732f6769746875627475746f7269616c62616467652e706e67" data-canonical-src="http://ruby-hyperloop.io/images/githubtutorialbadge.png" style="max-width:100%;">
+</a>
+<a href="https://gitter.im/ruby-hyperloop/chat" alt="Gitter chat" title="Gitter chat">
+<img src="https://camo.githubusercontent.com/b8977a8d6c2332418c534361001c30cca902bde1/687474703a2f2f727562792d68797065726c6f6f702e696f2f696d616765732f67697468756267697474657262616467652e706e67" data-canonical-src="http://ruby-hyperloop.io/images/githubgitterbadge.png" style="max-width:100%;">
+</a>
+<h2>
+<a id="user-content-webpacker-gem-tutorial" class="anchor" href="#webpacker-gem-tutorial" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><i></i>Webpacker GEM Tutorial</h2>
+<p><a href="https://camo.githubusercontent.com/3dcc48084d39d97f185df527c9d29539e716f891/687474703a2f2f727562792d68797065726c6f6f702e696f2f696d616765732f7475746f7269616c732f48797065726c6f6f702d5261696c737765627061636b65722e676966" target="_blank"><img src="https://camo.githubusercontent.com/3dcc48084d39d97f185df527c9d29539e716f891/687474703a2f2f727562792d68797065726c6f6f702e696f2f696d616765732f7475746f7269616c732f48797065726c6f6f702d5261696c737765627061636b65722e676966" data-canonical-src="http://ruby-hyperloop.io/images/tutorials/Hyperloop-Railswebpacker.gif" style="max-width:100%;"></a></p>
+<h2>
+<a id="user-content-introduction" class="anchor" href="#introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h2>
+<p>To set up your <strong>Hyperloop</strong> environment and continue this tutorial, please first follow the <br></p>
+<a href="http://ruby-hyperloop.io/installation/#ror" alt="Tutorial page" title="Tutorial page">
+<img src="https://camo.githubusercontent.com/9cb8f40710850b23eb8e30cc6ce8a18a6b8bc1b7/687474703a2f2f727562792d68797065726c6f6f702e696f2f696d616765732f676974687562696e7374616c6c6174696f6e726f7262616467652e706e67" data-canonical-src="http://ruby-hyperloop.io/images/githubinstallationrorbadge.png" style="max-width:100%;">
+</a>
+<br>
+<p>After <strong>Hyperloop</strong> has been installed properly we can go further:</p>
+<p>We are going to setup the <a href="https://github.com/rails/webpacker">Webpacker GEM</a> and implement a simple HelloWorld app to show how Hyperloop and <a href="https://webpack.js.org/">webpack</a> are running well together.</p>
+<h3>
+<a id="user-content-part-1---webpacker-gem" class="anchor" href="#part-1---webpacker-gem" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part 1 - Webpacker GEM</h3>
+<h4>
+<a id="user-content-step-11---installing-and-setting-up-the-webpacker-gem" class="anchor" href="#step-11---installing-and-setting-up-the-webpacker-gem" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1.1 - Installing and setting up the Webpacker GEM:</h4>
+<p>Update your Gemfile file:</p>
+<div class="highlight highlight-source-ruby"><pre><span class="pl-c"><span class="pl-c">#</span>Gemfile</span>
+
+<span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">'</span>webpacker<span class="pl-pds">'</span></span>
+</pre></div>
+<p>Then run:</p>
+<div class="highlight highlight-source-ruby"><pre>bundle update</pre></div>
+<p>Run the webpacker install generator:</p>
+<pre><code>bin/rails webpacker:install
+</code></pre>
+<h4>
+<a id="user-content-step-12---adding-libraries-into-webpack" class="anchor" href="#step-12---adding-libraries-into-webpack" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1.2 - Adding libraries into Webpack:</h4>
+<p><a href="https://github.com/rails/webpacker">Webpacker GEM</a> comes with the the <a href="https://yarnpkg.com/en/">YARN</a> package manager in order to install needed libraries.</p>
+<p>We are going to install 4 libraries required by our application:
+React, React-dom, Bootstrap and Bootswatch theme.</p>
+<p>Run these commands:</p>
+<pre><code>yarn add react
+yarn add react-dom
+yarn add bootstrap react-bootstrap
+yarn add bootswatch
+</code></pre>
+<h4>
+<a id="user-content-step-13---requiring-the-libraires" class="anchor" href="#step-13---requiring-the-libraires" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1.3 - Requiring the libraires</h4>
+<p>In the <code>app/javascript/packs</code> add the following two files:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-c"><span class="pl-c">//</span>app/javascript/packs/client_and_server.js</span>
+
+ReactDOM <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>react-dom<span class="pl-pds">'</span></span>);
+React <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>react<span class="pl-pds">'</span></span>);
+ReactBootstrap <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>react-bootstrap<span class="pl-pds">'</span></span>);</pre></div>
+<div class="highlight highlight-source-js"><pre><span class="pl-c"><span class="pl-c">//</span>app/javascript/packs/client_only.js</span>
+
+<span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>bootswatch/superhero/bootstrap.min.css<span class="pl-pds">'</span></span>);</pre></div>
+<h4>
+<a id="user-content-step-14---letting-webpack-know-react-and-reactdom-are-external" class="anchor" href="#step-14---letting-webpack-know-react-and-reactdom-are-external" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1.4 - Letting Webpack know React and ReactDOM are external</h4>
+<p>React and ReactDOM are being brought in by Hyperloop, so we need to let Webpack know that these libraries are external so we do not end up with more than one copy of React running. Note that you will also need to do this for your production environment.</p>
+<p>In the <code>module.export</code> block, add the following to <code>development.js</code>:</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-c"><span class="pl-c">//</span>config/webpack/development.js</span>
+
+externals<span class="pl-k">:</span> {
+       <span class="pl-s"><span class="pl-pds">"</span>react<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>React<span class="pl-pds">"</span></span>,
+       <span class="pl-s"><span class="pl-pds">"</span>react-dom<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>ReactDOM<span class="pl-pds">"</span></span>
+   },</pre></div>
+<h4>
+<a id="user-content-step-15---building-the-webpack-bundle" class="anchor" href="#step-15---building-the-webpack-bundle" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1.5 - Building the webpack bundle</h4>
+<p><strong>You will need to do this step whenever you make any changes to Webpack or add additional libraries though Yarn.</strong></p>
+<p>Run the following commands in your console:</p>
+<pre><code>rm -rf tmp/cache/
+bin/webpack
+rake environment
+</code></pre>
+<p>Note in the above, you should always delete your cache before building your webpack assets. <code>rake environment</code> will recompile Hyperloop.</p>
+<p><i></i> In the future, when you will add a new library with webpack, it can happen that it is not correctly loaded. So, in this case, we advise to delete the <code>node_modules</code> directory, re-install libraires, re-generate the webpack file and clear Hyperloop cache and browser cache:</p>
+<pre><code>rm -rf node_modules
+yarn
+rm -rf tmp/cache
+bin/webpack
+
+Clear Browser cache
+</code></pre>
+<h4>
+<a id="user-content-step-16---configuring-rails-asset-pipeline" class="anchor" href="#step-16---configuring-rails-asset-pipeline" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1.6 - Configuring Rails asset pipeline:</h4>
+<div class="highlight highlight-source-ruby"><pre><span class="pl-c"><span class="pl-c">#</span>config/initializers/assets.rb</span>
+
+<span class="pl-c1">Rails</span>.application.config.assets.paths <span class="pl-k">&lt;&lt;</span> <span class="pl-c1">Rails</span>.root.join(<span class="pl-s"><span class="pl-pds">'</span>public<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>packs<span class="pl-pds">'</span></span>).to_s</pre></div>
+<h4>
+<a id="user-content-step-17---adding-pack-files-to-the-asset-pipeline" class="anchor" href="#step-17---adding-pack-files-to-the-asset-pipeline" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1.7 - Adding pack files to the asset pipeline:</h4>
+<p>By using the Hyperloop configuration file we can directly tell our app to include the pack files in the asset pipeline:</p>
+<div class="highlight highlight-source-ruby"><pre><span class="pl-c"><span class="pl-c">#</span>config/initializers/hyperloop.rb</span>
+
+<span class="pl-c1">Hyperloop</span>.configuration <span class="pl-k">do </span>|<span class="pl-smi">config</span>|
+  config.transport <span class="pl-k">=</span> <span class="pl-c1">:simple_poller</span>
+  config.import <span class="pl-s"><span class="pl-pds">'</span>client_and_server<span class="pl-pds">'</span></span>
+  config.import <span class="pl-s"><span class="pl-pds">'</span>client_only<span class="pl-pds">'</span></span>, <span class="pl-c1">client_only:</span> <span class="pl-c1">true</span>
+<span class="pl-k">end</span></pre></div>
+<p><i></i> In Rails production mode it would be necessary to include the pack files in your application main layout:</p>
+<div class="highlight highlight-text-html-erb"><pre>#app/views/layouts/application.tml.erb
+
+<span class="pl-pse">&lt;%=</span><span class="pl-s1"> javascript_pack_tag <span class="pl-s"><span class="pl-pds">'</span>client_and_server<span class="pl-pds">'</span></span> </span><span class="pl-pse"><span class="pl-s1">%</span>&gt;</span></pre></div>
+<h4>
+<a id="user-content-step-18---adding-css-pack-files-to-the-asset-pipeline" class="anchor" href="#step-18---adding-css-pack-files-to-the-asset-pipeline" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 1.8 - Adding CSS pack files to the asset pipeline</h4>
+<p>Add this line:</p>
+<pre lang="stylesheet"><code>//app/assets/stylesheets/application.css
+
+*= require client_only.css
+</code></pre>
+<p>Note: if you prefer that your CSS pack files being directly packed into the <code>client_only.js</code> you can modify the <code>config/webpack/</code> config files and run the <code>rm -rf tmp/cache/; bin/webpack; rake environment</code> again.</p>
+<h3>
+<a id="user-content-part-2---implementing-the-helloworld-app" class="anchor" href="#part-2---implementing-the-helloworld-app" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part 2 - Implementing the helloworld app</h3>
+<h4>
+<a id="user-content-step-21---creating-the-helloworld-component" class="anchor" href="#step-21---creating-the-helloworld-component" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 2.1 - Creating the Helloworld component</h4>
+<p>Run the hyperloop generator:</p>
+<pre><code>rails g hyper:component Helloworld
+</code></pre>
+<p>You can view the new Component created in <code>/app/hyperloop/components/</code></p>
+<h4>
+<a id="user-content-step-22---updating-helloworld-component-code" class="anchor" href="#step-22---updating-helloworld-component-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 2.2 - Updating Helloworld component code</h4>
+<p>Copy and paste this code into the component file you've just generated:</p>
+<div class="highlight highlight-source-ruby"><pre><span class="pl-c"><span class="pl-c">#</span>/app/hyperloop/components/helloworld.rb</span>
+
+<span class="pl-k">class</span> <span class="pl-en">Helloworld<span class="pl-e"> &lt; Hyperloop::Component</span></span>
+
+  state <span class="pl-c1">show_field:</span> <span class="pl-c1">false</span>
+  state <span class="pl-c1">field_value:</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>
+
+  render(<span class="pl-c1">DIV</span>) <span class="pl-k">do</span>
+    show_button
+    <span class="pl-c1">DIV</span>(<span class="pl-c1">class:</span> <span class="pl-s"><span class="pl-pds">'</span>formdiv<span class="pl-pds">'</span></span>) <span class="pl-k">do</span>
+      show_input
+      <span class="pl-c1">H1</span> { <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pse">#{</span><span class="pl-s1">state.field_value</span><span class="pl-pse"><span class="pl-s1">}</span></span><span class="pl-pds">"</span></span> }
+    <span class="pl-k">end</span> <span class="pl-k">if</span> state.show_field
+  <span class="pl-k">end</span>
+
+  <span class="pl-k">def</span> <span class="pl-en">show_button</span>
+    <span class="pl-c1">BUTTON</span>(<span class="pl-c1">class:</span> <span class="pl-s"><span class="pl-pds">'</span>btn btn-info<span class="pl-pds">'</span></span>) <span class="pl-k">do</span>
+      state.show_field <span class="pl-k">?</span> <span class="pl-s"><span class="pl-pds">"</span>Click to hide HelloWorld input field<span class="pl-pds">"</span></span> : <span class="pl-s"><span class="pl-pds">"</span>Click to show HelloWorld input field<span class="pl-pds">"</span></span>
+    <span class="pl-k">end</span>.on(<span class="pl-c1">:click</span>) { mutate.show_field <span class="pl-k">!</span>state.show_field }
+  <span class="pl-k">end</span>
+
+  <span class="pl-k">def</span> <span class="pl-en">show_input</span>
+
+    <span class="pl-c1">H4</span> <span class="pl-k">do</span>
+      span{<span class="pl-s"><span class="pl-pds">'</span>Please type <span class="pl-pds">'</span></span>}
+      span.colored {<span class="pl-s"><span class="pl-pds">'</span>Hello World<span class="pl-pds">'</span></span>}
+      span{<span class="pl-s"><span class="pl-pds">'</span> in the input field below :<span class="pl-pds">'</span></span>}
+      br {}
+      span{<span class="pl-s"><span class="pl-pds">'</span>Or anything you want (^̮^)<span class="pl-pds">'</span></span>}
+    <span class="pl-k">end</span>
+
+    <span class="pl-c1">INPUT</span>(<span class="pl-c1">type:</span> <span class="pl-c1">:text</span>, <span class="pl-c1">class:</span> <span class="pl-s"><span class="pl-pds">'</span>form-control<span class="pl-pds">'</span></span>).on(<span class="pl-c1">:change</span>) <span class="pl-k">do </span>|<span class="pl-smi">e</span>|
+      state.field_value! e.target.value
+    <span class="pl-k">end</span>
+  <span class="pl-k">end</span>
+
+  <span class="pl-k">def</span> <span class="pl-en">show_text</span>
+    <span class="pl-c1">H1</span> { <span class="pl-s"><span class="pl-pds">"</span><span class="pl-pse">#{</span><span class="pl-s1">state.field_value</span><span class="pl-pse"><span class="pl-s1">}</span></span><span class="pl-pds">"</span></span> }
+  <span class="pl-k">end</span>
+
+<span class="pl-k">end</span>
+
+</pre></div>
+<h4>
+<a id="user-content-step-23---creating-the-controller" class="anchor" href="#step-23---creating-the-controller" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 2.3 - Creating the controller</h4>
+<p>Create a <code>home_controller.rb</code> file, manually or with the command <code>rails g controller Home helloworld --skip-javascripts</code>:</p>
+<div class="highlight highlight-source-ruby"><pre><span class="pl-c"><span class="pl-c">#</span>app/controllers/home_controller.rb</span>
+
+<span class="pl-k">class</span> <span class="pl-en">HomeController<span class="pl-e"> &lt; ApplicationController</span></span>
+  <span class="pl-k">def</span> <span class="pl-en">helloworld</span>
+  <span class="pl-k">end</span>
+<span class="pl-k">end</span></pre></div>
+<h4>
+<a id="user-content-step-24---updating-the-routesrb-file" class="anchor" href="#step-24---updating-the-routesrb-file" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 2.4 - Updating the routes.rb file</h4>
+<div class="highlight highlight-source-ruby"><pre><span class="pl-c"><span class="pl-c">#</span>config/routes.rb</span>
+
+root <span class="pl-s"><span class="pl-pds">'</span>home#helloworld<span class="pl-pds">'</span></span></pre></div>
+<h4>
+<a id="user-content-step-25---creating-the-helloworld-view-file" class="anchor" href="#step-25---creating-the-helloworld-view-file" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 2.5 - Creating the helloworld view file:</h4>
+<div class="highlight highlight-text-html-erb"><pre>#app/views/home/helloworld.html.erb
+
+&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>hyperloophelloword<span class="pl-pds">"</span></span>&gt;
+
+  &lt;<span class="pl-ent">div</span>&gt;
+    <span class="pl-pse">&lt;%=</span><span class="pl-s1"> react_component <span class="pl-s"><span class="pl-pds">'</span>::Helloworld<span class="pl-pds">'</span></span>, {}, { <span class="pl-c1">prerender:</span> <span class="pl-c1">true</span> } </span><span class="pl-pse"><span class="pl-s1">%</span>&gt;</span>
+  &lt;/<span class="pl-ent">div</span>&gt;
+
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+<h4>
+<a id="user-content-step-26---styling" class="anchor" href="#step-26---styling" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Step 2.6 - Styling</h4>
+<p>We will add a <strong>Hyperloop</strong> logo</p>
+<div class="highlight highlight-text-html-erb"><pre>#app/views/home/helloworld.html.erb
+
+&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>hyperloophelloword<span class="pl-pds">"</span></span>&gt;
+
+  &lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>https://rawgit.com/ruby-hyperloop/hyperloop-js-helloworld/master/hyperloop-logo-medium-white.png?raw=true<span class="pl-pds">"</span></span>&gt;
+
+  &lt;<span class="pl-ent">div</span>&gt;
+    <span class="pl-pse">&lt;%=</span><span class="pl-s1"> react_component <span class="pl-s"><span class="pl-pds">'</span>::Helloworld<span class="pl-pds">'</span></span>, {}, { <span class="pl-c1">prerender:</span> <span class="pl-c1">true</span> } </span><span class="pl-pse"><span class="pl-s1">%</span>&gt;</span>
+  &lt;/<span class="pl-ent">div</span>&gt;
+
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+<p>And load 1 small sample stylesheet :</p>
+<div class="highlight highlight-text-html-erb"><pre>#app/views/layouts/application.html.erb
+
+&lt;!DOCTYPE html&gt;
+&lt;<span class="pl-ent">html</span>&gt;
+  &lt;<span class="pl-ent">head</span>&gt;
+    &lt;<span class="pl-ent">title</span>&gt;HyperloopRailsHelloworld&lt;/<span class="pl-ent">title</span>&gt;
+    <span class="pl-pse">&lt;%=</span><span class="pl-s1"> csrf_meta_tags </span><span class="pl-pse"><span class="pl-s1">%</span>&gt;</span>
+
+  &lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>https://rawgit.com/ruby-hyperloop/hyperloop-js-helloworld/master/style.css<span class="pl-pds">"</span></span> &gt;
+
+    <span class="pl-pse">&lt;%=</span><span class="pl-s1"> stylesheet_link_tag    <span class="pl-s"><span class="pl-pds">'</span>application<span class="pl-pds">'</span></span>, <span class="pl-c1">media:</span> <span class="pl-s"><span class="pl-pds">'</span>all<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>data-turbolinks-track<span class="pl-pds">'</span></span>: <span class="pl-s"><span class="pl-pds">'</span>reload<span class="pl-pds">'</span></span> </span><span class="pl-pse"><span class="pl-s1">%</span>&gt;</span>
+    <span class="pl-pse">&lt;%=</span><span class="pl-s1"> javascript_include_tag <span class="pl-s"><span class="pl-pds">'</span>application<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>data-turbolinks-track<span class="pl-pds">'</span></span>: <span class="pl-s"><span class="pl-pds">'</span>reload<span class="pl-pds">'</span></span> </span><span class="pl-pse"><span class="pl-s1">%</span>&gt;</span>
+  &lt;/<span class="pl-ent">head</span>&gt;
+
+  &lt;<span class="pl-ent">body</span>&gt;
+    <span class="pl-pse">&lt;%=</span><span class="pl-s1"> <span class="pl-k">yield</span> </span><span class="pl-pse"><span class="pl-s1">%</span>&gt;</span>
+  &lt;/<span class="pl-ent">body</span>&gt;
+&lt;/<span class="pl-ent">html</span>&gt;
+</pre></div>
+<h4>
+<a id="user-content-final-step-running-your-app" class="anchor" href="#final-step-running-your-app" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Final step: Running your app:</h4>
+<p>Start your Rails server and browse <code>http://localhost:3000</code>.</p>
+<div>
+  <p>The <strong>best way</strong> to get help and contribute is to join our Gitter Chat</p>
+  <a href="https://gitter.im/ruby-hyperloop/chat" alt="Gitter chat" title="Gitter chat">
+  <img src="https://camo.githubusercontent.com/b8977a8d6c2332418c534361001c30cca902bde1/687474703a2f2f727562792d68797065726c6f6f702e696f2f696d616765732f67697468756267697474657262616467652e706e67" data-canonical-src="http://ruby-hyperloop.io/images/githubgitterbadge.png" style="max-width:100%;">
+</a>
+</div>
+</article></body></html>
