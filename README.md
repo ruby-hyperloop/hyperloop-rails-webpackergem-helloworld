@@ -31,7 +31,7 @@
 
 ### Prerequisites
 
-{ [Ruby On Rails](http://rubyonrails.org/) }, { [hyperloop GEM](ryby-hyperloop.io) }
+{ [Ruby On Rails](http://rubyonrails.org/) }, { [hyperloop GEM](http://ruby-hyperloop.io) }
 
 To set up the **Hyperloop** GEM onto the Ruby On Rails environment, please follow the <br>
 
