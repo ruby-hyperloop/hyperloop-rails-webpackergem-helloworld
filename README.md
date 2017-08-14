@@ -23,15 +23,17 @@
 </a>
 
 
-## <i class="flaticon-professor-teaching"></i><span class="bigfirstletter">W</span>ebpacker GEM Tutorial
+## <i class="flaticon-professor-teaching"></i><span class="bigfirstletter">H</span>yperloop and webpacker GEM Tutorial
 
 
 <img src="http://ruby-hyperloop.io/images/tutorials/Hyperloop-Railswebpacker.gif" class="imgborder">
 
 
-## Introduction
+### Prerequisites
 
-To set up your **Hyperloop** environment and continue this tutorial, please first follow the <br>
+{ [Ruby On Rails](http://rubyonrails.org/) }, { [hyperloop GEM](ryby-hyperloop.io) }
+
+To set up the **Hyperloop** GEM onto the Ruby On Rails environment, please follow the <br>
 
 <a href="http://ruby-hyperloop.io/installation/#ror" alt="Tutorial page" title="Tutorial page">
 <img src="http://ruby-hyperloop.io/images/githubinstallationrorbadge.png">
@@ -39,9 +41,17 @@ To set up your **Hyperloop** environment and continue this tutorial, please firs
 
 <br>
 
-After **Hyperloop** has been installed properly we can go further:
+### The Goals of this Tutorial
 
 We are going to setup the [Webpacker GEM](https://github.com/rails/webpacker) and implement a simple HelloWorld app to show how Hyperloop and [webpack](https://webpack.js.org/) are running well together.
+
+### Skills required
+
+Working knowledge of Rails and Hyperloop required
+
+<br>
+
+## TUTORIAL
 
 ### Part 1 - Webpacker GEM
 
