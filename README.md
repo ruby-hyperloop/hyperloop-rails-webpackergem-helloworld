@@ -354,13 +354,16 @@ Start your Rails server and browse `http://localhost:3000`.
 
 You can find the final application source code here:<br>
 
-<a href="https://github.com/ruby-hyperloop/hyperloop-rails-webpackergem-helloworld" alt="Tutorial source code" title="utorial source code">
+<a href="https://github.com/ruby-hyperloop/hyperloop-rails-webpackergem-helloworld" alt="Tutorial source code" title="Tutorial source code">
 <img src="http://ruby-hyperloop.io/images/githubsourcecodebadge.png">
 </a>
 
-<div>
-  <p>The <strong>best way</strong> to get help and contribute is to join our Gitter Chat</p>
-  <a href="https://gitter.im/ruby-hyperloop/chat" alt="Gitter chat" title="Gitter chat">
-  <img src="http://ruby-hyperloop.io/images/githubgitterbadge.png">
+<br><br>
+
+The best way to get help and contribute is to join our Gitter Chat
+
+<a href="https://gitter.im/ruby-hyperloop/chat" alt="Gitter chat" title="Gitter chat">
+<img src="http://ruby-hyperloop.io/images/githubgitterbadge.png">
 </a>
+
 </div>
