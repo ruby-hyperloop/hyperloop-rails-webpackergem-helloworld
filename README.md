@@ -49,7 +49,7 @@ We are going to setup the [Webpacker GEM](https://github.com/rails/webpacker) an
 
 You can find the final application source code here:<br>
 
-<a href="https://github.com/ruby-hyperloop/hyperloop-rails-webpackergem-helloworld" alt="Tutorial source code" title="utorial source code">
+<a href="https://github.com/ruby-hyperloop/hyperloop-rails-webpackergem-helloworld" alt="Tutorial source code" title="Tutorial source code">
 <img src="http://ruby-hyperloop.io/images/githubsourcecodebadge.png">
 </a>
 
