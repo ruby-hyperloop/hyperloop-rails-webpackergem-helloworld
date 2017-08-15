@@ -1,3 +1,6 @@
+
+<div class="githubhyperloopheader">
+
 <p align="center">
 
 <a href="http://ruby-hyperloop.io/" alt="Hyperloop" title="Hyperloop">
@@ -22,6 +25,7 @@
 <img src="http://ruby-hyperloop.io/images/githubgitterbadge.png">
 </a>
 
+</div>
 
 ## <i class="flaticon-professor-teaching"></i><span class="bigfirstletter">H</span>yperloop and webpacker GEM Tutorial
 
