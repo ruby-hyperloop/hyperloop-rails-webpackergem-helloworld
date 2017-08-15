@@ -39,8 +39,6 @@ To set up the **Hyperloop** GEM onto the Ruby On Rails environment, please follo
 <img src="http://ruby-hyperloop.io/images/githubinstallationrorbadge.png">
 </a>
 
-<br>
-
 ### The Goals of this Tutorial
 
 We are going to setup the [Webpacker GEM](https://github.com/rails/webpacker) and implement a simple HelloWorld app to show how Hyperloop and [webpack](https://webpack.js.org/) are running well together.
